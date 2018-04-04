@@ -1,6 +1,4 @@
 
-out: 	.ascii "hello world!\n"
-
 	.globl _start
 .text
 _start:
@@ -15,3 +13,5 @@ _start:
 	mov %ebx, %eax			# SYS_EXIT
 	xor %ebx, %ebx
 	int $0x80
+
+out: 	.ascii "hello world!\n"

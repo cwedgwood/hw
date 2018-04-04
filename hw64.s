@@ -1,6 +1,4 @@
 
-out: 	.ascii "hello world!\n"
-
 	.globl _start
 .text
 _start:
@@ -16,3 +14,4 @@ _start:
 	xor %rdi, %rdi
 	syscall
 
+out: 	.ascii "hello world!\n"
