@@ -14,6 +14,9 @@ usage
 
 hw32 & hw64 say "hello world!"
 
+there is also hwx32 though it's not put into the container by default
+as not all kernels support this
+
 bored?
 ------
 
