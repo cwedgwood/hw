@@ -1,19 +1,18 @@
 
-.global _start
+out: 	.ascii "hello world!\n"
 
+	.globl _start
 .text
 _start:
 	// write
-	movq $1, %rax
-	movq $1, %rdi
+	movq $1, %rax			# SYS_WRITE
+	movq %rax, %rdi			# stdout
 	movq $out, %rsi
 	movq $13, %rdx
 	syscall
 
 	// exit
-	movq $60, %rax
-	movq $0, %rdi
+	movq $60, %rax			# SYS_EXIT
+	xor %rdi, %rdi
 	syscall
 
-//.data
-out: 	.ascii "hello world!\n"
