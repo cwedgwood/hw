@@ -5,14 +5,14 @@ out: 	.ascii "hello world!\n"
 .text
 _start:
 	// write
-	movq $1, %rax			# SYS_WRITE
-	movq %rax, %rdi			# stdout
-	movq $out, %rsi
-	movq $13, %rdx
+	mov $1, %rax			# SYS_WRITE
+	mov %rax, %rdi			# stdout
+	lea out(%rip), %rsi
+	mov $13, %rdx
 	syscall
 
 	// exit
-	movq $60, %rax			# SYS_EXIT
+	mov $60, %rax			# SYS_EXIT
 	xor %rdi, %rdi
 	syscall
 
