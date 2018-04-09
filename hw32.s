@@ -6,7 +6,7 @@ _start:
 	mov $4, %eax			# SYS_WRITE
 	mov $1, %ebx			# stdout
 	mov $out, %ecx
-	mov $13, %edx
+	mov $len, %edx
 	int $0x80
 
 	// exit
@@ -14,4 +14,5 @@ _start:
 	xor %ebx, %ebx
 	int $0x80
 
-out: 	.ascii "hello world!\n"
+out: 	.ascii "Hello World!\n"
+outend:	.equ len, outend-out

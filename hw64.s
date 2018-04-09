@@ -6,7 +6,7 @@ _start:
 	mov $1, %rax			# SYS_WRITE
 	mov %rax, %rdi			# stdout
 	lea out(%rip), %rsi
-	mov $13, %rdx
+	mov $len, %rdx
 	syscall
 
 	// exit
@@ -14,4 +14,5 @@ _start:
 	xor %rdi, %rdi
 	syscall
 
-out: 	.ascii "hello world!\n"
+out: 	.ascii "Hello World!\n"
+outend:	.equ len, outend-out
