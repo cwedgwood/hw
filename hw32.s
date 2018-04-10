@@ -14,5 +14,5 @@ _start:
 	xor %ebx, %ebx
 	int $0x80
 
-out: 	.ascii "Hello World!\n"
+out: 	.ascii "hw32 says \"Hello World!\"\n"
 outend:	.equ len, outend-out

@@ -14,5 +14,5 @@ _start:
 	xor %edi, %edi
 	syscall
 
-out: 	.ascii "Hello World!\n"
+out: 	.ascii "hwx32 says \"Hello World!\"\n"
 outend:	.equ len, outend-out

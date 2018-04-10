@@ -14,5 +14,5 @@ _start:
 	xor %rdi, %rdi
 	syscall
 
-out: 	.ascii "Hello World!\n"
+out: 	.ascii "hw64 says \"Hello World!\"\n"
 outend:	.equ len, outend-out
