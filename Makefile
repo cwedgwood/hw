@@ -7,7 +7,7 @@ all: hw32 hw64 hwx32
 runtest: all
 	@./hw32
 	@./hw64
-	@./hwx32 || echo "Failed to execute hw32"
+	@./hwx32
 
 # 3 explicit rules because we have 3 different arch's so a given .s.o
 # style rule wouldn't work
