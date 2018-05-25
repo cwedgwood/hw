@@ -28,7 +28,10 @@ clean:
 	rm -f *.o *~ hw32 hw64 hwx32
 
 container:
-	sudo docker build -t cwedgwood/hw . | cat
-	sudo docker images cwedgwood/hw
+	docker build -t cwedgwood/hw . | cat
+	docker images cwedgwood/hw
 
-.PHONY: default all runtest clean container
+container-test: container
+	docker run cwedgwood/hw
+
+.PHONY: default all runtest clean container container-test
