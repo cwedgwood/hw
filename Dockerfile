@@ -1,6 +1,6 @@
 # -*-
 
-FROM cwedgwood/bldr:0.01
+FROM cwedgwood/bldr:0.03
 
 RUN mkdir -p /build/
 WORKDIR /build/
