@@ -28,7 +28,7 @@ clean:
 	rm -f *.o *~ hw32 hw64 hwx32
 
 container:
-	docker build -t cwedgwood/hw . | cat
+	docker build -t cwedgwood/hw .
 	docker images cwedgwood/hw
 
 container-test: container
