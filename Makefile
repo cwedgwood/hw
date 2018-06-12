@@ -32,6 +32,6 @@ container:
 	docker images cwedgwood/hw
 
 container-test: container
-	docker run cwedgwood/hw
+	docker run --rm cwedgwood/hw
 
 .PHONY: default all runtest clean container container-test
