@@ -2,6 +2,9 @@
 
 FROM cwedgwood/bldr:0.04
 
+ARG foo=bar
+ENV FOO=$foo
+
 RUN mkdir -p /build/
 WORKDIR /build/
 COPY *.s Makefile ./
